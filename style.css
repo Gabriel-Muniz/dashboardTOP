@@ -128,26 +128,57 @@ table {
   border-spacing: 0;
 }
 /* My styles */
-body{
-    width: 100vw;
-    height: 100vh;
+html {
+  font-size: 62.5%; /* resetting font-size to 10px. So using rem become easier*/
+}
+body {
+  width: 100vw;
+  height: 100vh;
 }
 
-.body{
-    width: 100%;
-    height: 100%;
-    background-color: #bada55;
+.body {
+  width: 100%;
+  height: 100%;
+  background-color: #bada55;
+  display: grid;
+  grid-template-columns: minmax(250px , 1fr) 4fr;
+  grid-template-rows: 1fr 5fr;
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+
+  background-color: aquamarine;
+  grid-row: 1/3;
+
+}
+.sidebar > *{
+    margin-bottom: 5rem;
+}
+
+.sidebar > h1 {
+    display: flex;
+  font-size: 3.2rem;
+}
+
+.sidebar > ul{
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows:1fr 5fr;
+    gap: 0.8em;
+    font-size: 2.2rem;
 }
-.sidebar{
-    background-color: aquamarine;
-    grid-row: 1/3;
+.sidebar img{
+    height: 1em;
+    margin-right: 3rem;
 }
-.header{
-    background-color: #b00b55;
+.sidebar  li{
+    display: flex;
+    cursor: pointer;
 }
-.content-container{
-    background-color: #b16a55;
+
+.header {
+  background-color: #b00b55;
+}
+.content-container {
+  background-color: #b16a55;
 }
