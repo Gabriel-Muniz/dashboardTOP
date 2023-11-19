@@ -160,7 +160,6 @@ body {
   display: flex;
   font-size: 3.2rem;
 }
-
 .sidebar > ul {
   display: grid;
   gap: 0.8em;
@@ -176,7 +175,35 @@ body {
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
   background-color: #b00b55;
+}
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #aaccee50;
+}
+.header-top-row .profile-pic {
+  height: 50px;
+  border-radius: 50%;
+}
+.header-bottom-row {
+  display: flex;
+  justify-content: space-between;
+}
+.header-bottom-row .profile-pic {
+  height: 75px;
+  border-radius: 50%;
+}
+.header-top-row > *,
+.header-bottom-row > * {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  height: 50px;
 }
 .content-container {
   background-color: #b16a55;
