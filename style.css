@@ -214,7 +214,7 @@ h4 {
 
 .sidebar li {
   display: flex;
-  
+
   margin-bottom: 0.8em;
   cursor: pointer;
   transition: padding-left 0.25s, box-shadow 0.25s;
@@ -230,7 +230,7 @@ h4 {
   background-color: var(--secondary-color);
   padding: 2em 4em;
 }
-.icon{
+.icon {
   height: 25px;
   cursor: pointer;
 }
@@ -358,9 +358,9 @@ input[type="search"] {
   box-shadow: 0 0.2rem 0.2rem var(--primary-color);
 
   background-color: var(--secondary-color);
-  transition: transform 0.1s , box-shadow 0.25s, scale 0.25s;
+  transition: transform 0.1s, box-shadow 0.25s, scale 0.25s;
 }
-.card:hover{
+.card:hover {
   transform: translate(0, -0.2rem);
   transform: scale(1.02);
   box-shadow: 0 0.4rem 1rem black;
@@ -369,7 +369,7 @@ input[type="search"] {
   align-self: end;
   justify-self: end;
 }
-.card-icons > img{
+.card-icons > img {
   margin-left: 1rem;
 }
 .card-description {
@@ -386,6 +386,7 @@ input[type="search"] {
 .announcement-card {
   display: grid;
   gap: 1rem;
+  text-wrap: wrap;
 
   background-color: var(--secondary-color);
 
