@@ -202,7 +202,6 @@ h4 {
 }
 .sidebar > ul {
   display: grid;
-  gap: 0.8em;
   font-size: 2.2rem;
 }
 .sidebar img {
@@ -215,6 +214,8 @@ h4 {
 
 .sidebar li {
   display: flex;
+  
+  margin-bottom: 0.8em;
   cursor: pointer;
   transition: padding-left 0.25s, box-shadow 0.25s;
 }
@@ -300,10 +301,10 @@ input[type="search"] {
 
   cursor: pointer;
 
-  transition: box-shadow 0.25s, transform 0.5s;
+  transition: box-shadow 0.25s, transform 0.25s;
 }
 .bottom-right > button:hover {
-  transform: translateY(-0.25rem);
+  transform: translateY(-0.35rem);
   box-shadow: 0 0.25rem 5px var(--primary-color);
 }
 .header-bottom-row {
@@ -333,7 +334,7 @@ input[type="search"] {
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(160px, 250px));
+  grid-template-rows: repeat(auto-fit, minmax(160px, 280px));
   gap: 2rem;
 
   grid-column: 1;
