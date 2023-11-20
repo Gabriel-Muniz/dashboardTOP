@@ -272,34 +272,36 @@ input[type="search"] {
 
 .content-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 250px;
   grid-template-rows: 3rem 1fr;
 
-  padding: 2em;
+  padding: 2rem;
 
   background-color: #b16a55;
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, clamp(200px, 45%, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(160px, 250px));
+  gap: 2rem;
+
   grid-column: 1;
   grid-row: 2;
-  gap: 2rem;
+
+    padding-right: 2rem;
 }
 
 .card {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
-  width: clamp(250px, 1fr, 300px);
+  width: auto;
   height: auto;
   padding: 2rem;
 
   border-radius: 10px;
 
   background-color: #666;
-  /* overflow-y: hidden; */
 }
 .card-icons {
   align-self: end;
@@ -308,19 +310,64 @@ input[type="search"] {
 .card-description{
     font-size: 1.6rem;
 }
+.content-sidebar{
+    display: grid;
+    grid-template-rows: repeat(auto-fit,minmax(0, max-content));
+    gap: 2rem;
+}
 .announcement-section{
-    background-color: #fff;
     border-radius: 10px;
 }
 .announcement-card{
     display: grid;
     gap: 1rem;
 
+    background-color: #fff;
+
     padding: 2em;
+}
+.announcement-card:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.announcement-card:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .announcement-card~.announcement-card{
     border-top: 2px solid black;    
 }
 .announcement-text{
     font-size: 1.4rem;
+}
+.trending-section{
+    display: grid;
+    grid-template-columns: minmax(0, max-content);
+    grid-template-rows: repeat(4 1fr);
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.trending-profile{
+    display: grid;
+    grid-template-columns: minmax(0, max-content) 1fr;
+    align-items: center;
+}
+.recommended-profile > p{
+    font-size: 1.6rem;
+}
+.profile-pic-trending{
+    height: 50px;
+    width: 50px;
+    background-color: #bada55;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-right: 2rem;
+}
+.profile-pic-trending > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-self: center;
 }
