@@ -175,19 +175,65 @@ body {
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 20px;
+
   background-color: #b00b55;
+  padding: 2em 4em;
 }
 .header-top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #aaccee50;
+}
+.top-left {
+  flex: 1;
+}
+input[type="search"] {
+  width: clamp(250px, 50%, 500px);
+  margin-left: 2rem;
+  height: 3rem;
 }
 .header-top-row .profile-pic {
   height: 50px;
   border-radius: 50%;
+}
+.top-right,
+.bottom-right,
+.bottom-left {
+  display: grid;
+  gap: 2rem;
+
+  font-size: 2.2rem;
+}
+.bottom-left {
+  min-width: 230px;
+}
+.greetings-message {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+.greetings {
+  font-size: 1.6rem;
+}
+.user-name-account {
+  font-size: 2.8rem;
+}
+.user-AT {
+  font-size: 2rem;
+}
+.bottom-right > button {
+  font-size: 1.6rem;
+  padding: 0.5em 1em;
+
+  border: none;
+  border-radius: 2rem;
+
+  margin-left: 2rem;
+
+  cursor: pointer;
 }
 .header-bottom-row {
   display: flex;
@@ -203,7 +249,8 @@ body {
   align-items: center;
 }
 .icon {
-  height: 50px;
+  height: 25px;
+  cursor: pointer;
 }
 .content-container {
   background-color: #b16a55;
