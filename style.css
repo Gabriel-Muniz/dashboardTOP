@@ -363,7 +363,7 @@ input[type="search"] {
 .card:hover{
   transform: translate(0, -0.2rem);
   transform: scale(1.02);
-  box-shadow: 0 0.4rem 1rem var(--primary-color);
+  box-shadow: 0 0.4rem 1rem black;
 }
 .card-icons {
   align-self: end;
