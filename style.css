@@ -430,6 +430,15 @@ input[type="search"] {
   display: grid;
   grid-template-columns: minmax(0, max-content) 1fr;
   align-items: center;
+  cursor: pointer;
+}
+.trending-profile p:first-of-type:hover{
+  text-decoration: underline;
+  transform: translate(0.5em);
+}
+.trending-profile p:first-of-type{
+  font-weight: bold;
+  transition: transform 0.1s;
 }
 .recommended-profile > p {
   font-size: 1.6rem;
