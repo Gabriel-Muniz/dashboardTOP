@@ -132,13 +132,13 @@ html {
   font-size: 62.5%; /* resetting font-size to 10px. So using rem become easier*/
 }
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #bada55;
   display: grid;
   grid-template-columns: minmax(250px, 1fr) 4fr;
@@ -148,10 +148,13 @@ h1 {
   font-size: 3.2rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+}
+h4{
+    font-size: 1.8rem;
 }
 .sidebar {
   display: flex;
@@ -268,36 +271,56 @@ input[type="search"] {
 }
 
 .content-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 1fr;
-  
-    padding: 2em;
-  
-    background-color: #b16a55;
-  }  
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 3rem 1fr;
 
-.cards-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, clamp(200px, 45%, 300px));
-    grid-column: 1;
-    grid-row: 2;
-    gap: 2rem;
+  padding: 2em;
+
+  background-color: #b16a55;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, clamp(200px, 45%, 300px));
+  grid-template-rows: repeat(auto-fit, minmax(160px, 250px));
+  grid-column: 1;
+  grid-row: 2;
+  gap: 2rem;
 }
 
 .card {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
-    width: clamp(250px, 1fr, 300px);
-  height: 160px;
+  width: clamp(250px, 1fr, 300px);
+  height: auto;
   padding: 2rem;
 
   border-radius: 10px;
-  /* box-shadow: 5px 0 0 #acce55 inset; */
 
   background-color: #666;
+  /* overflow-y: hidden; */
 }
 .card-icons {
   align-self: end;
   margin-left: auto;
+}
+.card-description{
+    font-size: 1.6rem;
+}
+.announcement-section{
+    background-color: #fff;
+    border-radius: 10px;
+}
+.announcement-card{
+    display: grid;
+    gap: 1rem;
+
+    padding: 2em;
+}
+.announcement-card~.announcement-card{
+    border-top: 2px solid black;    
+}
+.announcement-text{
+    font-size: 1.4rem;
 }
