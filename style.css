@@ -388,9 +388,22 @@ input[type="search"] {
   gap: 1rem;
   text-wrap: wrap;
 
+  cursor: pointer;
+
   background-color: var(--secondary-color);
 
   padding: 2em;
+
+  transition: box-shadow 0.25s, transform 0.1s;
+}
+.announcement-card ~ .announcement-card {
+  box-shadow: 0 2px 0 black inset;
+}
+.announcement-card:hover {
+  box-shadow: 0.4rem 0 0.5rem var(--primary-color),
+    -0.4rem 0 0.5rem var(--primary-color);
+  transform: scale(1.05);
+  border: none;
 }
 .announcement-card:first-child {
   border-top-left-radius: 10px;
@@ -400,9 +413,7 @@ input[type="search"] {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.announcement-card ~ .announcement-card {
-  border-top: 2px solid black;
-}
+
 .announcement-text {
   font-size: 1.4rem;
 }
