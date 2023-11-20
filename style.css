@@ -230,7 +230,11 @@ h4 {
   background-color: var(--secondary-color);
   padding: 2em 4em;
 }
-.icon {
+.icon{
+  height: 25px;
+  cursor: pointer;
+}
+.header .icon {
   height: 25px;
   cursor: pointer;
   filter: invert(91%) sepia(11%) saturate(159%) hue-rotate(6deg)
@@ -351,12 +355,22 @@ input[type="search"] {
   padding: 2rem;
 
   border-radius: 10px;
+  box-shadow: 0 0.2rem 0.2rem var(--primary-color);
 
   background-color: var(--secondary-color);
+  transition: transform 0.1s , box-shadow 0.25s, scale 0.25s;
+}
+.card:hover{
+  transform: translate(0, -0.2rem);
+  transform: scale(1.02);
+  box-shadow: 0 0.4rem 1rem var(--primary-color);
 }
 .card-icons {
   align-self: end;
-  margin-left: auto;
+  justify-self: end;
+}
+.card-icons > img{
+  margin-left: 1rem;
 }
 .card-description {
   font-size: 1.6rem;
